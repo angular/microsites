@@ -1,0 +1,169 @@
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+
+    <%- partial("../node_modules/microsite-ui/_partials/nav", {
+        name: 'Universal',
+        logoWithText: '../node_modules/microsite-ui/images/angular-logo-with-text.svg',
+        CTA: {
+            text: 'Get Started',
+            url: '/quickstart'
+        },
+        pages: [{
+            text: 'Overview',
+            href: '/overview'
+        }, {
+            text: 'API',
+            href: '/api'
+        }, {
+            text: 'GitHub',
+            href: 'https://github.com/angular/universal'
+        }],
+        homeHref: '/'
+    }) %>
+
+    <main class="mdl-layout__content">
+
+        <header class="hero-background">
+            <div class="mdl-layout__header-row">
+            </div>
+
+            <section class="section--center mdl-grid mdl-grid--no-spacing">
+                <div class="mdl-cell">
+                    <h4 class="mt1 page-title">Getting Started</h4>
+                </div>
+            </section>
+            <div class="mdl-layout__header-row">
+            </div>
+        </header>
+
+        <section class="section--center mdl-grid mdl-grid--no-spacing">
+
+            <div class="features-list">
+                <h4>Initial Set Up</h4>
+                <p>
+                    There are many different potential configurations for Angular Universal. For this QuickStart,
+                    we are going to focus on the most common setup which includes:
+                </p>
+                <ul>
+                    <li style="font-size:16px">Angular 2 (obviously!)</li>
+                    <li style="font-size:16px">Node.js back end</li>
+                    <li style="font-size:16px">Webpack</li>
+                </ul>
+                <p>
+                    So, make sure you <a style="color:blue;padding:0" href="nodejs.org">download and install Node.js</a> before getting started.
+                </p>
+                <h4>1. Angular 2 App</h4>
+                <p>
+                    We won't go over how to create a basic Angular 2 app in this guide. If you don't already have
+                    an Angular 2 app, then use the
+                    <a style="color:blue;padding:0" href="https://github.com/AngularClass/angular2-webpack-starter">Angular 2 Webpack Starter</a>.
+                </p>
+                <h4>2. Install Dependencies</h4>
+                <p>
+                    In the root directory of your project run the following commands:
+                </p>
+                <div class="code-block">
+                    <code style="white-space:pre;display:block;unicode-bidi:embed">
+> npm install body-parser angular2-universal preboot express --save
+> typings install node express body-parser serve-static express-serve-static-core mime --ambient
+                    </code>
+                </div>
+                <h4 style="margin-top:18px">3. Add a Server</h4>
+                <p>
+                    Create a file called server.js in the root of your application with the following code.
+                    Read through the comments in this code and make the appropriate adjustments to work
+                    with your Angular 2 app.
+                </p>
+                <div class="code-block">
+                    <code style="white-space:pre;display:block;unicode-bidi:embed">
+import * as path from 'path';
+import * as express from 'express';
+import * as bodyParser from 'body-parser';
+
+// Angular 2 Universal
+import 'angular2-universal/polyfills';
+import {
+provide,
+enableProdMode,
+expressEngine,
+REQUEST_URL,
+ORIGIN_URL,
+BASE_URL,
+NODE_ROUTER_PROVIDERS,
+NODE_HTTP_PROVIDERS,
+ExpressEngineConfig
+} from 'angular2-universal';
+
+// replace this line with your Angular 2 root component
+import {App} from './app/app.component';
+
+const app = express();
+const ROOT = path.join(path.resolve(__dirname, '..'));
+
+enableProdMode();
+
+// Express View
+app.engine('.html', expressEngine);
+app.set('views', __dirname);
+app.set('view engine', 'html');
+
+app.use(bodyParser.json());
+
+function ngApp(req, res) {
+let baseUrl = '/';
+let url = req.originalUrl || '/';
+
+let config: ExpressEngineConfig = {
+directives: [ App ],
+
+// dependencies shared among all requests to server
+platformProviders: [
+provide(ORIGIN_URL, {useValue: 'http://localhost:3000'}),
+provide(BASE_URL, {useValue: baseUrl}),
+],
+
+// dependencies re-created for each request
+providers: [
+provide(REQUEST_URL, {useValue: url}),
+NODE_ROUTER_PROVIDERS,
+NODE_HTTP_PROVIDERS,
+],
+
+// if true, server will wait for all async to resolve before returning response
+async: true,
+
+// if you want preboot, you need to set selector for the app root
+// you can also include various preboot options here (explained in separate document)
+preboot: { appRoot: 'app' }
+};
+
+res.render('index', config);
+}
+
+// Serve static files
+app.use(express.static(ROOT, {index: false}));
+
+// send all requests to Angular Universal
+// if you want Express to handle certain routes (ex. for an API) make sure you adjust this
+app.use('*', ngApp);
+
+// Server
+app.listen(3000, () => {
+console.log('Listening on: http://localhost:3000');
+});
+                    </code>
+                </div>
+                <h4 style="margin-top:18px">4. Start the Server</h4>
+                <div class="code-block">
+                    <code style="white-space:pre;display:block;unicode-bidi:embed">
+> node server.js
+                    </code>
+                </div>
+            </div>
+
+        </section>
+
+        <%- partial("../node_modules/microsite-ui/_partials/footer", {
+            footerImg: '../node_modules/microsite-ui/images/angular-logo.svg'
+        }) %>
+    </main>
+</div>

@@ -1,0 +1,8 @@
+{
+  "firebase": "universal-angular-io",
+  "public": "www",
+  "ignore": [
+    "firebase.json",
+    "**/.*"
+  ]
+}

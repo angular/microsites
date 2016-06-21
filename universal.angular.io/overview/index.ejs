@@ -1,0 +1,129 @@
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+
+    <%- partial("../node_modules/microsite-ui/_partials/nav", {
+        name: 'Universal',
+        logoWithText: '../node_modules/microsite-ui/images/angular-logo-with-text.svg',
+        CTA: {
+            text: 'Get Started',
+            url: '/quickstart'
+        },
+        pages: [{
+            text: 'Overview',
+            href: '/overview'
+        }, {
+            text: 'API',
+            href: '/api'
+        }, {
+            text: 'GitHub',
+            href: 'https://github.com/angular/universal'
+        }],
+        homeHref: '/'
+    }) %>
+
+    <main class="mdl-layout__content">
+
+        <header class="hero-background">
+            <div class="mdl-layout__header-row">
+            </div>
+
+            <section class="section--center mdl-grid mdl-grid--no-spacing">
+                <div class="mdl-cell">
+                    <h4 class="mt1 page-title">Overview</h4>
+                </div>
+            </section>
+            <div class="mdl-layout__header-row">
+            </div>
+        </header>
+
+        <section class="section--center mdl-grid mdl-grid--no-spacing">
+            <div class="features-list">
+                <h4>High Level</h4>
+                <p>
+                    At a high level, there are two major pieces to the Angular Universal:
+                </p>
+                <ol>
+                    <li style="font-size:16px">
+                        Rendering on the server which means generating all the HTML for a page at a given route
+                    </li>
+                    <li style="font-size:16px">
+                        Transitioning from the server view to the client view in the browser client
+                    </li>
+                </ol>
+                <p>
+                    There are two different approaches you can use for server rendering. The first option is to
+                    <b>pre-render</b> your application which means that you would use one of the Universal
+                    build tools (i.e. gulp, grunt, broccoli, webpack, etc.) to generate static HTML for all
+                    your routes at build time. Then you could deploy that static HTML to a CDN. The advantage
+                    of this approach is that it is highly scalable and performant. The disadvantage is that
+                    it is not quite as flexible as the second approach.
+                </p>
+                <p>
+                    The second approach is to dynamically <b>re-render</b> your application on a web server
+                    for each request. There are still several caching options available with this approach
+                    to improve scalability and performance, but you would be running your application code
+                    within the context of Angular Universal for each request.
+                </p>
+                <p>
+                    Angular Universal was originally built to work with a node.js back-end. There are adapters
+                    for most popular node.js server-side frameworks such as Express or Hapi.js. In addition
+                    to node.js, however, Angular Universal has
+                    <a style="color:blue;padding:0" href="https://github.com/aspnet/NodeServices">ASP.NET Core support</a>. In the near
+                    future we hope to add support for Java, PHP and Python.
+                </p>
+            </div>
+            <div class="features-list">
+                <h4>Server Rendering Flows</h4>
+                <p>
+                    Flow for server <b>pre-rendering</b>:
+                </p>
+                <ol>
+                    <li style="font-size:16px">Generate static HTML with build tool</li>
+                    <li style="font-size:16px">Deploy generated HTML to a CDN</li>
+                    <li style="font-size:16px">Server view served up by CDN</li>
+                    <li style="font-size:16px">Server view to client view transition (see below)</li>
+                </ol>
+                <p>
+                    Flow for server <b>re-rendering</b>:
+                </p>
+                <ol>
+                    <li style="font-size:16px">HTTP GET request sent to the server</li>
+                    <li style="font-size:16px">
+                        Server generates a page that contains rendered HTML and inline JavaScript for Preboot
+                        (and you can optionally add serialized data for caching purposes)
+                    </li>
+                    <li style="font-size:16px">Server view to client view transition (see below)</li>
+                </ol>
+                <p>
+                    Flow for <b>server view to client view transition</b>:
+                </p>
+                <ol>
+                    <li style="font-size:16px">Browser receives initial payload from server</li>
+                    <li style="font-size:16px">User sees server view</li>
+                    <li style="font-size:16px">Preboot creates hidden div that will be used for client bootstrap and starts recording events</li>
+                    <li style="font-size:16px">Browser makes async requests for additional assets (i.e. images, JS, CSS, etc.)</li>
+                    <li style="font-size:16px">Once external resources loaded, Angular client bootstrapping begins</li>
+                    <li style="font-size:16px">Client view rendered to the hidden div created by Preboot</li>
+                    <li style="font-size:16px">Bootstrap complete, so Angular client calls preboot.done()</li>
+                    <li style="font-size:16px">
+                        Preboot events replayed in order to adjust the application state to reflect changes made by the user before Angular bootstrapped (i.e. typing in textbox, clicking button, etc.)
+                    </li>
+                    <li style="font-size:16px">Preboot switches the hidden client view div for the visible server view div</li>
+                    <li style="font-size:16px">Finally, Preboot performs some cleanup on the visible client view including setting focus</li>
+                </ol>
+                <p>
+                    Note that much of this is configurable and can be adjusted for your use case. For example, you can
+                    control exactly how Preboot listens for events, replays them and switches from server to client view.
+                    There are also several options for performance optimizations.
+                </p>
+            </div>
+
+            <div class=" button-container mdl-cell mdl-cell--12-col-desktop center">
+                <a href="/quickstart/" class="cta-button mdl-typography--font-regular mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"> Get Started </a>
+            </div>
+        </section>
+
+        <%- partial("../node_modules/microsite-ui/_partials/footer", {
+            footerImg: '../node_modules/microsite-ui/images/angular-logo.svg'
+        }) %>
+    </main>
+</div>

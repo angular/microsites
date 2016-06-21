@@ -1,0 +1,8 @@
+{
+  "firebase": "material-angular-io",
+  "public": "www",
+  "ignore": [
+    "firebase.json",
+    "**/.*"
+  ]
+}

@@ -1,0 +1,24 @@
+// NOTE: Copy this file and place it in your microsite's styles folder. `main.scss` will look for and import this file.
+@import "../node_modules/material-design-lite/src/variables";
+
+/* ==========  CUSTOM THEME COLORS  ========== */
+// Main theme colors
+$primary-color: unquote("rgb(#{$palette-teal-500})"); // This is your primary color theme
+$secondary-color: unquote("rgb(#{$palette-teal-700})"); // This is the darker shade within the same palette
+$primary-light: unquote("rgb(#{$palette-teal-100})"); // This is the lighest shade within the same palette
+$primary-dark: unquote("rgb(#{$palette-teal-900})"); // This is the darkest shade within the same palette
+
+/* ==========  CUSTOM THEME IMAGE  ========== */
+// Main Hero Image
+.hero-image {
+  width: 400px;
+  padding-right: 40px;
+
+  @media (max-width: 840px) {
+    padding-right: 0;
+  }
+}
+
+h5 {
+  max-width: 100%;
+}

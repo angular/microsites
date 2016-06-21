@@ -1,0 +1,62 @@
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+
+  <%- partial("../node_modules/microsite-ui/_partials/nav", {
+    name: 'Universal',
+    logoWithText: '../node_modules/microsite-ui/images/angular-logo-with-text.svg',
+    CTA: {
+      text: 'Get Started',
+      url: '/quickstart'
+    },
+    pages: [{
+      text: 'Overview',
+      href: '/overview'
+    }, {
+      text: 'API',
+      href: '/api'
+    }, {
+        text: 'GitHub',
+        href: 'https://github.com/angular/universal'
+    }],
+    homeHref: '/'
+  }) %>
+
+  <main class="mdl-layout__content">
+
+      <header class="hero-background">
+        <div class="mdl-layout__header-row">
+        </div>
+
+        <section class="section--center mdl-grid mdl-grid--no-spacing">
+          <div class="mdl-cell">
+            <h4 class="mt1 page-title">API Docs</h4>
+          </div>
+        </section>
+        <div class="mdl-layout__header-row">
+        </div>
+      </header>
+
+      <section class="section--center mdl-grid mdl-grid--no-spacing">
+        <div class="features-list">
+          <h4>Modules</h4>
+          <p>
+            The following docs are automatically generated from the
+            <a style="color:blue;padding:0" href="https://github.com/angular/universal">Angular Universal library</a>.
+            These generated api docs are really rough right now, but they will be improved in the coming weeks.
+          </p>
+          <ul>
+            <li><a style="color:blue;padding:0" href="/api/universal/index.html#typedoc-main-index">Universal API Docs</a></li>
+            <li><a style="color:blue;padding:0" href="/api/preboot/globals.html">Preboot API Docs</a></li>
+          </ul>
+        </div>
+
+        <div class=" button-container mdl-cell mdl-cell--12-col-desktop center">
+          <a href="/quickstart/" class="cta-button mdl-typography--font-regular mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"> Get Started </a>
+        </div>
+      </section>
+
+      <%- partial("../node_modules/microsite-ui/_partials/footer", {
+        footerImg: '../node_modules/microsite-ui/images/angular-logo.svg'
+      }) %>
+  </main>
+
+</div>

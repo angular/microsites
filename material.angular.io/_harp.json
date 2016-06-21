@@ -1,0 +1,9 @@
+{
+ "globals": {
+   "name"  : "Material",
+   "global_cta" : {
+     "href" : "https://github.com/angular/material2",
+     "text" : "Preview on GitHub"
+   }
+ }
+}

@@ -1,0 +1,65 @@
+
+  <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+
+    <%- partial("node_modules/microsite-ui/_partials/nav", {
+      name: 'CLI',
+      logoWithText: 'node_modules/microsite-ui/images/angular-logo-with-text.svg',
+      CTA: {
+        text: 'Get Started',
+        url: 'https://github.com/angular/angular-cli'
+      },
+      pages: [{
+        text: 'Cli Commands',
+        href: '/reference.pdf',
+      }, {
+        text: 'GitHub',
+        href: 'https://github.com/angular/angular-cli'
+      }],
+      homeHref: '/'
+    }) %>
+
+    <main class="mdl-layout__content">
+      <header class="hero-background">
+
+          <!-- Hero -->
+          <%- partial("node_modules/microsite-ui/_partials/hero", {
+            name: 'Angular CLI',
+            logo: {
+              src: 'images/cli-logo.svg',
+              alt: 'Mobile Toolkit'
+            },
+            tagline: 'A command line interface for Angular',
+            CTA: {
+              text: 'Get Started',
+              href: 'https://github.com/angular/angular-cli'
+            }
+          }) %>
+
+      </header>
+
+      <!-- Add as many features as needed -->
+      <%- partial("node_modules/microsite-ui/_partials/features", {
+        features: [{
+          name: 'ng new',
+          text: 'The Angular2 CLI makes it easy to create an application that already works, right out of the box. It already follows our best practices!'
+        }, {
+          name: 'ng generate',
+          text: 'Generate components, routes, services and pipes with a simple command. The CLI will also create simple test shells for all of these.'
+        }, {
+          name: 'ng serve',
+          text: 'Easily put your application in production'
+        }, {
+          name: 'Test, Lint, Format',
+          text: 'Make your code really shine. Run your unittests or your end-to-end tests with the breeze of a command. Execute the official Angular2 linter and run clang format.'
+        }],
+        CTA: {
+          text: 'Get Started',
+          url: 'https://github.com/angular/angular-cli'
+        }
+      }) %>
+
+      <%- partial("node_modules/microsite-ui/_partials/footer", {
+        footerImg: 'node_modules/microsite-ui/images/angular-logo.svg'
+      }) %>
+    </main>
+  </div>

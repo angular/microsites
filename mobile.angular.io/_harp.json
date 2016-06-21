@@ -1,0 +1,9 @@
+{
+ "globals": {
+   "name"  : "Mobile",
+   "global_cta" : {
+     "href" : "https://github.com/angular/mobile-toolkit",
+     "text" : "Preview on GitHub"
+   }
+ }
+}

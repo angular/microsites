@@ -1,0 +1,762 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>&quot;node/normalize&quot; | Preboot</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../assets/css/main.css">
+	<script src="../assets/js/modernizr.js"></script>
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="../assets/js/search.js" data-base="..">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="../index.html" class="title">Preboot</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+							<input type="checkbox" id="tsd-filter-externals" checked />
+							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
+							<input type="checkbox" id="tsd-filter-only-exported" />
+							<label class="tsd-widget" for="tsd-filter-only-exported">Only exported</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="tsd-breadcrumb">
+				<li>
+					<a href="../globals.html">Globals</a>
+				</li>
+				<li>
+					<a href="_node_normalize_.html">&quot;node/normalize&quot;</a>
+				</li>
+			</ul>
+			<h1>External module &quot;node/normalize&quot;</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<section class="tsd-panel-group tsd-index-group">
+				<h2>Index</h2>
+				<section class="tsd-panel tsd-index-panel">
+					<div class="tsd-index-content">
+						<section class="tsd-index-section ">
+							<h3>Functions</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-function tsd-parent-kind-external-module"><a href="_node_normalize_.html#normalize" class="tsd-kind-icon">normalize</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Object literals</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-object-literal tsd-parent-kind-external-module"><a href="_node_normalize_.html#defaultfreezestyles" class="tsd-kind-icon">default<wbr>Freeze<wbr>Styles</a></li>
+								<li class="tsd-kind-object-literal tsd-parent-kind-external-module"><a href="_node_normalize_.html#freezestrategies" class="tsd-kind-icon">freeze<wbr>Strategies</a></li>
+								<li class="tsd-kind-object-literal tsd-parent-kind-external-module"><a href="_node_normalize_.html#listenstrategies" class="tsd-kind-icon">listen<wbr>Strategies</a></li>
+								<li class="tsd-kind-object-literal tsd-parent-kind-external-module"><a href="_node_normalize_.html#normalizers" class="tsd-kind-icon">normalizers</a></li>
+								<li class="tsd-kind-object-literal tsd-parent-kind-external-module"><a href="_node_normalize_.html#replaystrategies" class="tsd-kind-icon">replay<wbr>Strategies</a></li>
+							</ul>
+						</section>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Functions</h2>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-external-module">
+					<a name="normalize" class="tsd-anchor"></a>
+					<h3>normalize</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module">
+						<li class="tsd-signature tsd-kind-icon">normalize<span class="tsd-signature-symbol">(</span>opts<span class="tsd-signature-symbol">: </span><a href="../interfaces/_interfaces_preboot_options_.prebootoptions.html" class="tsd-signature-type">PrebootOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/_interfaces_preboot_options_.prebootoptions.html" class="tsd-signature-type">PrebootOptions</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/jeffwhelpley/universal/blob/fix-preboot-autofocus/modules/preboot/src/node/normalize.ts#L194">node/normalize.ts:194</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Normalize options so user can enter shorthand and it is
+									expanded as appropriate for the browser code</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>opts: <a href="../interfaces/_interfaces_preboot_options_.prebootoptions.html" class="tsd-signature-type">PrebootOptions</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../interfaces/_interfaces_preboot_options_.prebootoptions.html" class="tsd-signature-type">PrebootOptions</a></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Object literals</h2>
+				<section class="tsd-panel tsd-member tsd-kind-object-literal tsd-parent-kind-external-module">
+					<a name="defaultfreezestyles" class="tsd-anchor"></a>
+					<h3>default<wbr>Freeze<wbr>Styles</h3>
+					<div class="tsd-signature tsd-kind-icon">default<wbr>Freeze<wbr>Styles<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/jeffwhelpley/universal/blob/fix-preboot-autofocus/modules/preboot/src/node/normalize.ts#L16">node/normalize.ts:16</a></li>
+						</ul>
+					</aside>
+					<section class="tsd-panel tsd-member tsd-kind-object-literal tsd-parent-kind-object-literal">
+						<a name="defaultfreezestyles.overlay" class="tsd-anchor"></a>
+						<h3>overlay</h3>
+						<div class="tsd-signature tsd-kind-icon">overlay<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/jeffwhelpley/universal/blob/fix-preboot-autofocus/modules/preboot/src/node/normalize.ts#L17">node/normalize.ts:17</a></li>
+							</ul>
+						</aside>
+						<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+							<a name="defaultfreezestyles.overlay.classname" class="tsd-anchor"></a>
+							<h3>class<wbr>Name</h3>
+							<div class="tsd-signature tsd-kind-icon">class<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/jeffwhelpley/universal/blob/fix-preboot-autofocus/modules/preboot/src/node/normalize.ts#L18">node/normalize.ts:18</a></li>
+								</ul>
+							</aside>
+						</section>
+						<section class="tsd-panel tsd-member tsd-kind-object-literal tsd-parent-kind-object-literal">
+							<a name="defaultfreezestyles.overlay.style" class="tsd-anchor"></a>
+							<h3>style</h3>
+							<div class="tsd-signature tsd-kind-icon">style<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/jeffwhelpley/universal/blob/fix-preboot-autofocus/modules/preboot/src/node/normalize.ts#L19">node/normalize.ts:19</a></li>
+								</ul>
+							</aside>
+							<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+								<a name="defaultfreezestyles.overlay.style.display" class="tsd-anchor"></a>
+								<h3>display</h3>
+								<div class="tsd-signature tsd-kind-icon">display<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+								<aside class="tsd-sources">
+									<ul>
+										<li>Defined in <a href="https://github.com/jeffwhelpley/universal/blob/fix-preboot-autofocus/modules/preboot/src/node/normalize.ts#L21">node/normalize.ts:21</a></li>
+									</ul>
+								</aside>
+							</section>
+							<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+								<a name="defaultfreezestyles.overlay.style.height" class="tsd-anchor"></a>
+								<h3>height</h3>
+								<div class="tsd-signature tsd-kind-icon">height<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+								<aside class="tsd-sources">
+									<ul>
+										<li>Defined in <a href="https://github.com/jeffwhelpley/universal/blob/fix-preboot-autofocus/modules/preboot/src/node/normalize.ts#L26">node/normalize.ts:26</a></li>
+									</ul>
+								</aside>
+							</section>
+							<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+								<a name="defaultfreezestyles.overlay.style.left" class="tsd-anchor"></a>
+								<h3>left</h3>
+								<div class="tsd-signature tsd-kind-icon">left<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+								<aside class="tsd-sources">
+									<ul>
+										<li>Defined in <a href="https://github.com/jeffwhelpley/universal/blob/fix-preboot-autofocus/modules/preboot/src/node/normalize.ts#L24">node/normalize.ts:24</a></li>
+									</ul>
+								</aside>
+							</section>
+							<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+								<a name="defaultfreezestyles.overlay.style.position" class="tsd-anchor"></a>
+								<h3>position</h3>
+								<div class="tsd-signature tsd-kind-icon">position<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+								<aside class="tsd-sources">
+									<ul>
+										<li>Defined in <a href="https://github.com/jeffwhelpley/universal/blob/fix-preboot-autofocus/modules/preboot/src/node/normalize.ts#L20">node/normalize.ts:20</a></li>
+									</ul>
+								</aside>
+							</section>
+							<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+								<a name="defaultfreezestyles.overlay.style.top" class="tsd-anchor"></a>
+								<h3>top</h3>
+								<div class="tsd-signature tsd-kind-icon">top<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+								<aside class="tsd-sources">
+									<ul>
+										<li>Defined in <a href="https://github.com/jeffwhelpley/universal/blob/fix-preboot-autofocus/modules/preboot/src/node/normalize.ts#L23">node/normalize.ts:23</a></li>
+									</ul>
+								</aside>
+							</section>
+							<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+								<a name="defaultfreezestyles.overlay.style.width" class="tsd-anchor"></a>
+								<h3>width</h3>
+								<div class="tsd-signature tsd-kind-icon">width<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+								<aside class="tsd-sources">
+									<ul>
+										<li>Defined in <a href="https://github.com/jeffwhelpley/universal/blob/fix-preboot-autofocus/modules/preboot/src/node/normalize.ts#L25">node/normalize.ts:25</a></li>
+									</ul>
+								</aside>
+							</section>
+							<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+								<a name="defaultfreezestyles.overlay.style.zindex" class="tsd-anchor"></a>
+								<h3>z<wbr>Index</h3>
+								<div class="tsd-signature tsd-kind-icon">z<wbr>Index<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+								<aside class="tsd-sources">
+									<ul>
+										<li>Defined in <a href="https://github.com/jeffwhelpley/universal/blob/fix-preboot-autofocus/modules/preboot/src/node/normalize.ts#L22">node/normalize.ts:22</a></li>
+									</ul>
+								</aside>
+							</section>
+						</section>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-object-literal tsd-parent-kind-object-literal">
+						<a name="defaultfreezestyles.spinner" class="tsd-anchor"></a>
+						<h3>spinner</h3>
+						<div class="tsd-signature tsd-kind-icon">spinner<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/jeffwhelpley/universal/blob/fix-preboot-autofocus/modules/preboot/src/node/normalize.ts#L29">node/normalize.ts:29</a></li>
+							</ul>
+						</aside>
+						<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+							<a name="defaultfreezestyles.spinner.classname-1" class="tsd-anchor"></a>
+							<h3>class<wbr>Name</h3>
+							<div class="tsd-signature tsd-kind-icon">class<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/jeffwhelpley/universal/blob/fix-preboot-autofocus/modules/preboot/src/node/normalize.ts#L30">node/normalize.ts:30</a></li>
+								</ul>
+							</aside>
+						</section>
+						<section class="tsd-panel tsd-member tsd-kind-object-literal tsd-parent-kind-object-literal">
+							<a name="defaultfreezestyles.spinner.style-1" class="tsd-anchor"></a>
+							<h3>style</h3>
+							<div class="tsd-signature tsd-kind-icon">style<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/jeffwhelpley/universal/blob/fix-preboot-autofocus/modules/preboot/src/node/normalize.ts#L31">node/normalize.ts:31</a></li>
+								</ul>
+							</aside>
+							<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+								<a name="defaultfreezestyles.spinner.style-1.display-1" class="tsd-anchor"></a>
+								<h3>display</h3>
+								<div class="tsd-signature tsd-kind-icon">display<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+								<aside class="tsd-sources">
+									<ul>
+										<li>Defined in <a href="https://github.com/jeffwhelpley/universal/blob/fix-preboot-autofocus/modules/preboot/src/node/normalize.ts#L33">node/normalize.ts:33</a></li>
+									</ul>
+								</aside>
+							</section>
+							<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+								<a name="defaultfreezestyles.spinner.style-1.position-1" class="tsd-anchor"></a>
+								<h3>position</h3>
+								<div class="tsd-signature tsd-kind-icon">position<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+								<aside class="tsd-sources">
+									<ul>
+										<li>Defined in <a href="https://github.com/jeffwhelpley/universal/blob/fix-preboot-autofocus/modules/preboot/src/node/normalize.ts#L32">node/normalize.ts:32</a></li>
+									</ul>
+								</aside>
+							</section>
+							<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+								<a name="defaultfreezestyles.spinner.style-1.zindex-1" class="tsd-anchor"></a>
+								<h3>z<wbr>Index</h3>
+								<div class="tsd-signature tsd-kind-icon">z<wbr>Index<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+								<aside class="tsd-sources">
+									<ul>
+										<li>Defined in <a href="https://github.com/jeffwhelpley/universal/blob/fix-preboot-autofocus/modules/preboot/src/node/normalize.ts#L34">node/normalize.ts:34</a></li>
+									</ul>
+								</aside>
+							</section>
+						</section>
+					</section>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-object-literal tsd-parent-kind-external-module">
+					<a name="freezestrategies" class="tsd-anchor"></a>
+					<h3>freeze<wbr>Strategies</h3>
+					<div class="tsd-signature tsd-kind-icon">freeze<wbr>Strategies<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/jeffwhelpley/universal/blob/fix-preboot-autofocus/modules/preboot/src/node/normalize.ts#L13">node/normalize.ts:13</a></li>
+						</ul>
+					</aside>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+						<a name="freezestrategies.spinner-1" class="tsd-anchor"></a>
+						<h3>spinner</h3>
+						<div class="tsd-signature tsd-kind-icon">spinner<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/jeffwhelpley/universal/blob/fix-preboot-autofocus/modules/preboot/src/node/normalize.ts#L13">node/normalize.ts:13</a></li>
+							</ul>
+						</aside>
+					</section>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-object-literal tsd-parent-kind-external-module">
+					<a name="listenstrategies" class="tsd-anchor"></a>
+					<h3>listen<wbr>Strategies</h3>
+					<div class="tsd-signature tsd-kind-icon">listen<wbr>Strategies<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/jeffwhelpley/universal/blob/fix-preboot-autofocus/modules/preboot/src/node/normalize.ts#L11">node/normalize.ts:11</a></li>
+						</ul>
+					</aside>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+						<a name="listenstrategies.attributes" class="tsd-anchor"></a>
+						<h3>attributes</h3>
+						<div class="tsd-signature tsd-kind-icon">attributes<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/jeffwhelpley/universal/blob/fix-preboot-autofocus/modules/preboot/src/node/normalize.ts#L11">node/normalize.ts:11</a></li>
+							</ul>
+						</aside>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+						<a name="listenstrategies.event_bindings" class="tsd-anchor"></a>
+						<h3>event_<wbr>bindings</h3>
+						<div class="tsd-signature tsd-kind-icon">event_<wbr>bindings<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/jeffwhelpley/universal/blob/fix-preboot-autofocus/modules/preboot/src/node/normalize.ts#L11">node/normalize.ts:11</a></li>
+							</ul>
+						</aside>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+						<a name="listenstrategies.selectors" class="tsd-anchor"></a>
+						<h3>selectors</h3>
+						<div class="tsd-signature tsd-kind-icon">selectors<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/jeffwhelpley/universal/blob/fix-preboot-autofocus/modules/preboot/src/node/normalize.ts#L11">node/normalize.ts:11</a></li>
+							</ul>
+						</aside>
+					</section>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-object-literal tsd-parent-kind-external-module">
+					<a name="normalizers" class="tsd-anchor"></a>
+					<h3>normalizers</h3>
+					<div class="tsd-signature tsd-kind-icon">normalizers<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/jeffwhelpley/universal/blob/fix-preboot-autofocus/modules/preboot/src/node/normalize.ts#L41">node/normalize.ts:41</a></li>
+						</ul>
+					</aside>
+					<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-object-literal">
+						<a name="normalizers.completeevent" class="tsd-anchor"></a>
+						<h3>complete<wbr>Event</h3>
+						<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-object-literal">
+							<li class="tsd-signature tsd-kind-icon">complete<wbr>Event<span class="tsd-signature-symbol">(</span>opts<span class="tsd-signature-symbol">: </span><a href="../interfaces/_interfaces_preboot_options_.prebootoptions.html" class="tsd-signature-type">PrebootOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						</ul>
+						<ul class="tsd-descriptions">
+							<li class="tsd-description">
+								<aside class="tsd-sources">
+									<ul>
+										<li>Defined in <a href="https://github.com/jeffwhelpley/universal/blob/fix-preboot-autofocus/modules/preboot/src/node/normalize.ts#L57">node/normalize.ts:57</a></li>
+									</ul>
+								</aside>
+								<h4 class="tsd-parameters-title">Parameters</h4>
+								<ul class="tsd-parameters">
+									<li>
+										<h5>opts: <a href="../interfaces/_interfaces_preboot_options_.prebootoptions.html" class="tsd-signature-type">PrebootOptions</a></h5>
+									</li>
+								</ul>
+								<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+							</li>
+						</ul>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-object-literal">
+						<a name="normalizers.freeze" class="tsd-anchor"></a>
+						<h3>freeze</h3>
+						<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-object-literal">
+							<li class="tsd-signature tsd-kind-icon">freeze<span class="tsd-signature-symbol">(</span>opts<span class="tsd-signature-symbol">: </span><a href="../interfaces/_interfaces_preboot_options_.prebootoptions.html" class="tsd-signature-type">PrebootOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						</ul>
+						<ul class="tsd-descriptions">
+							<li class="tsd-description">
+								<aside class="tsd-sources">
+									<ul>
+										<li>Defined in <a href="https://github.com/jeffwhelpley/universal/blob/fix-preboot-autofocus/modules/preboot/src/node/normalize.ts#L131">node/normalize.ts:131</a></li>
+									</ul>
+								</aside>
+								<div class="tsd-comment tsd-typography">
+									<div class="lead">
+										<p>Make sure freeze options are array of FreezeStrategy objects.
+											We have a set of base styles that are used for freeze (i.e. for
+										overaly and spinner), but these can be overriden</p>
+									</div>
+								</div>
+								<h4 class="tsd-parameters-title">Parameters</h4>
+								<ul class="tsd-parameters">
+									<li>
+										<h5>opts: <a href="../interfaces/_interfaces_preboot_options_.prebootoptions.html" class="tsd-signature-type">PrebootOptions</a></h5>
+									</li>
+								</ul>
+								<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+							</li>
+						</ul>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-object-literal">
+						<a name="normalizers.listen" class="tsd-anchor"></a>
+						<h3>listen</h3>
+						<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-object-literal">
+							<li class="tsd-signature tsd-kind-icon">listen<span class="tsd-signature-symbol">(</span>opts<span class="tsd-signature-symbol">: </span><a href="../interfaces/_interfaces_preboot_options_.prebootoptions.html" class="tsd-signature-type">PrebootOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						</ul>
+						<ul class="tsd-descriptions">
+							<li class="tsd-description">
+								<aside class="tsd-sources">
+									<ul>
+										<li>Defined in <a href="https://github.com/jeffwhelpley/universal/blob/fix-preboot-autofocus/modules/preboot/src/node/normalize.ts#L65">node/normalize.ts:65</a></li>
+									</ul>
+								</aside>
+								<div class="tsd-comment tsd-typography">
+									<div class="lead">
+										<p>Make sure that the listen option is an array of ListenStrategy
+										objects so client side doesn&#39;t need to worry about conversions</p>
+									</div>
+								</div>
+								<h4 class="tsd-parameters-title">Parameters</h4>
+								<ul class="tsd-parameters">
+									<li>
+										<h5>opts: <a href="../interfaces/_interfaces_preboot_options_.prebootoptions.html" class="tsd-signature-type">PrebootOptions</a></h5>
+									</li>
+								</ul>
+								<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+							</li>
+						</ul>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-object-literal">
+						<a name="normalizers.pauseevent" class="tsd-anchor"></a>
+						<h3>pause<wbr>Event</h3>
+						<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-object-literal">
+							<li class="tsd-signature tsd-kind-icon">pause<wbr>Event<span class="tsd-signature-symbol">(</span>opts<span class="tsd-signature-symbol">: </span><a href="../interfaces/_interfaces_preboot_options_.prebootoptions.html" class="tsd-signature-type">PrebootOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						</ul>
+						<ul class="tsd-descriptions">
+							<li class="tsd-description">
+								<aside class="tsd-sources">
+									<ul>
+										<li>Defined in <a href="https://github.com/jeffwhelpley/universal/blob/fix-preboot-autofocus/modules/preboot/src/node/normalize.ts#L46">node/normalize.ts:46</a></li>
+									</ul>
+								</aside>
+								<div class="tsd-comment tsd-typography">
+									<div class="lead">
+										<p>Just set default pauseEvent if doesn&#39;t exist</p>
+									</div>
+								</div>
+								<h4 class="tsd-parameters-title">Parameters</h4>
+								<ul class="tsd-parameters">
+									<li>
+										<h5>opts: <a href="../interfaces/_interfaces_preboot_options_.prebootoptions.html" class="tsd-signature-type">PrebootOptions</a></h5>
+									</li>
+								</ul>
+								<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+							</li>
+						</ul>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-object-literal">
+						<a name="normalizers.presets" class="tsd-anchor"></a>
+						<h3>presets</h3>
+						<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-object-literal">
+							<li class="tsd-signature tsd-kind-icon">presets<span class="tsd-signature-symbol">(</span>opts<span class="tsd-signature-symbol">: </span><a href="../interfaces/_interfaces_preboot_options_.prebootoptions.html" class="tsd-signature-type">PrebootOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						</ul>
+						<ul class="tsd-descriptions">
+							<li class="tsd-description">
+								<aside class="tsd-sources">
+									<ul>
+										<li>Defined in <a href="https://github.com/jeffwhelpley/universal/blob/fix-preboot-autofocus/modules/preboot/src/node/normalize.ts#L163">node/normalize.ts:163</a></li>
+									</ul>
+								</aside>
+								<div class="tsd-comment tsd-typography">
+									<div class="lead">
+										<p>Presets are modifications to options. In the future,
+											we may be simple presets like &#39;angular&#39; which add
+										all the listeners and replay.</p>
+									</div>
+								</div>
+								<h4 class="tsd-parameters-title">Parameters</h4>
+								<ul class="tsd-parameters">
+									<li>
+										<h5>opts: <a href="../interfaces/_interfaces_preboot_options_.prebootoptions.html" class="tsd-signature-type">PrebootOptions</a></h5>
+									</li>
+								</ul>
+								<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+							</li>
+						</ul>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-object-literal">
+						<a name="normalizers.replay" class="tsd-anchor"></a>
+						<h3>replay</h3>
+						<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-object-literal">
+							<li class="tsd-signature tsd-kind-icon">replay<span class="tsd-signature-symbol">(</span>opts<span class="tsd-signature-symbol">: </span><a href="../interfaces/_interfaces_preboot_options_.prebootoptions.html" class="tsd-signature-type">PrebootOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						</ul>
+						<ul class="tsd-descriptions">
+							<li class="tsd-description">
+								<aside class="tsd-sources">
+									<ul>
+										<li>Defined in <a href="https://github.com/jeffwhelpley/universal/blob/fix-preboot-autofocus/modules/preboot/src/node/normalize.ts#L98">node/normalize.ts:98</a></li>
+									</ul>
+								</aside>
+								<div class="tsd-comment tsd-typography">
+									<div class="lead">
+										<p>Make sure replay options are array of ReplayStrategy objects.
+											So, callers can just pass in simple string, but converted to
+										an array before passed into client side preboot.</p>
+									</div>
+								</div>
+								<h4 class="tsd-parameters-title">Parameters</h4>
+								<ul class="tsd-parameters">
+									<li>
+										<h5>opts: <a href="../interfaces/_interfaces_preboot_options_.prebootoptions.html" class="tsd-signature-type">PrebootOptions</a></h5>
+									</li>
+								</ul>
+								<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+							</li>
+						</ul>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-object-literal">
+						<a name="normalizers.resumeevent" class="tsd-anchor"></a>
+						<h3>resume<wbr>Event</h3>
+						<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-object-literal">
+							<li class="tsd-signature tsd-kind-icon">resume<wbr>Event<span class="tsd-signature-symbol">(</span>opts<span class="tsd-signature-symbol">: </span><a href="../interfaces/_interfaces_preboot_options_.prebootoptions.html" class="tsd-signature-type">PrebootOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						</ul>
+						<ul class="tsd-descriptions">
+							<li class="tsd-description">
+								<aside class="tsd-sources">
+									<ul>
+										<li>Defined in <a href="https://github.com/jeffwhelpley/universal/blob/fix-preboot-autofocus/modules/preboot/src/node/normalize.ts#L53">node/normalize.ts:53</a></li>
+									</ul>
+								</aside>
+								<div class="tsd-comment tsd-typography">
+									<div class="lead">
+										<p>Set default resumeEvent if doesn&#39;t exist</p>
+									</div>
+								</div>
+								<h4 class="tsd-parameters-title">Parameters</h4>
+								<ul class="tsd-parameters">
+									<li>
+										<h5>opts: <a href="../interfaces/_interfaces_preboot_options_.prebootoptions.html" class="tsd-signature-type">PrebootOptions</a></h5>
+									</li>
+								</ul>
+								<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+							</li>
+						</ul>
+					</section>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-object-literal tsd-parent-kind-external-module">
+					<a name="replaystrategies" class="tsd-anchor"></a>
+					<h3>replay<wbr>Strategies</h3>
+					<div class="tsd-signature tsd-kind-icon">replay<wbr>Strategies<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/jeffwhelpley/universal/blob/fix-preboot-autofocus/modules/preboot/src/node/normalize.ts#L12">node/normalize.ts:12</a></li>
+						</ul>
+					</aside>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+						<a name="replaystrategies.hydrate" class="tsd-anchor"></a>
+						<h3>hydrate</h3>
+						<div class="tsd-signature tsd-kind-icon">hydrate<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/jeffwhelpley/universal/blob/fix-preboot-autofocus/modules/preboot/src/node/normalize.ts#L12">node/normalize.ts:12</a></li>
+							</ul>
+						</aside>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+						<a name="replaystrategies.rerender" class="tsd-anchor"></a>
+						<h3>rerender</h3>
+						<div class="tsd-signature tsd-kind-icon">rerender<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/jeffwhelpley/universal/blob/fix-preboot-autofocus/modules/preboot/src/node/normalize.ts#L12">node/normalize.ts:12</a></li>
+							</ul>
+						</aside>
+					</section>
+				</section>
+			</section>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class="globals  ">
+						<a href="../globals.html"><em>Globals</em></a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="_browser_buffer_manager_.html">"browser/buffer_<wbr>manager"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="_browser_dom_.html">"browser/dom"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="_browser_event_manager_.html">"browser/event_<wbr>manager"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="_browser_freeze_freeze_with_spinner_.html">"browser/freeze/freeze_<wbr>with_<wbr>spinner"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="_browser_listen_listen_by_attributes_.html">"browser/listen/listen_<wbr>by_<wbr>attributes"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="_browser_listen_listen_by_event_bindings_.html">"browser/listen/listen_<wbr>by_<wbr>event_<wbr>bindings"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="_browser_listen_listen_by_selectors_.html">"browser/listen/listen_<wbr>by_<wbr>selectors"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="_browser_log_.html">"browser/log"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="_browser_preboot_browser_.html">"browser/preboot_<wbr>browser"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="_browser_replay_replay_after_hydrate_.html">"browser/replay/replay_<wbr>after_<wbr>hydrate"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="_browser_replay_replay_after_rerender_.html">"browser/replay/replay_<wbr>after_<wbr>rerender"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="_interfaces_element_.html">"interfaces/element"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="_interfaces_event_.html">"interfaces/event"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="_interfaces_preboot_options_.html">"interfaces/preboot_<wbr>options"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="_interfaces_preboot_ref_.html">"interfaces/preboot_<wbr>ref"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="_interfaces_strategy_.html">"interfaces/strategy"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="_node_browser_code_generator_.html">"node/browser_<wbr>code_<wbr>generator"</a>
+					</li>
+					<li class="current tsd-kind-external-module">
+						<a href="_node_normalize_.html">"node/normalize"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="_node_preboot_node_.html">"node/preboot_<wbr>node"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="_node_preboot_node_d_.html">"node/preboot_<wbr>node.d"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="_node_presets_.html">"node/presets"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="_node_utils_.html">"node/utils"</a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+					<li class=" tsd-kind-function tsd-parent-kind-external-module">
+						<a href="_node_normalize_.html#normalize" class="tsd-kind-icon">normalize</a>
+					</li>
+					<li class=" tsd-kind-object-literal tsd-parent-kind-external-module">
+						<a href="_node_normalize_.html#defaultfreezestyles" class="tsd-kind-icon">default<wbr>Freeze<wbr>Styles</a>
+					</li>
+					<li class=" tsd-kind-object-literal tsd-parent-kind-external-module">
+						<a href="_node_normalize_.html#freezestrategies" class="tsd-kind-icon">freeze<wbr>Strategies</a>
+					</li>
+					<li class=" tsd-kind-object-literal tsd-parent-kind-external-module">
+						<a href="_node_normalize_.html#listenstrategies" class="tsd-kind-icon">listen<wbr>Strategies</a>
+					</li>
+					<li class=" tsd-kind-object-literal tsd-parent-kind-external-module">
+						<a href="_node_normalize_.html#normalizers" class="tsd-kind-icon">normalizers</a>
+					</li>
+					<li class=" tsd-kind-object-literal tsd-parent-kind-external-module">
+						<a href="_node_normalize_.html#replaystrategies" class="tsd-kind-icon">replay<wbr>Strategies</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-module"><span class="tsd-kind-icon">Module</span></li>
+				<li class="tsd-kind-object-literal"><span class="tsd-kind-icon">Object literal</span></li>
+				<li class="tsd-kind-variable"><span class="tsd-kind-icon">Variable</span></li>
+				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
+				<li class="tsd-kind-function tsd-has-type-parameter"><span class="tsd-kind-icon">Function with type parameter</span></li>
+				<li class="tsd-kind-index-signature"><span class="tsd-kind-icon">Index signature</span></li>
+				<li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-enum"><span class="tsd-kind-icon">Enumeration</span></li>
+				<li class="tsd-kind-enum-member"><span class="tsd-kind-icon">Enumeration member</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-enum"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-enum"><span class="tsd-kind-icon">Method</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-interface"><span class="tsd-kind-icon">Interface</span></li>
+				<li class="tsd-kind-interface tsd-has-type-parameter"><span class="tsd-kind-icon">Interface with type parameter</span></li>
+				<li class="tsd-kind-constructor tsd-parent-kind-interface"><span class="tsd-kind-icon">Constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-interface"><span class="tsd-kind-icon">Method</span></li>
+				<li class="tsd-kind-index-signature tsd-parent-kind-interface"><span class="tsd-kind-icon">Index signature</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li>
+				<li class="tsd-kind-class tsd-has-type-parameter"><span class="tsd-kind-icon">Class with type parameter</span></li>
+				<li class="tsd-kind-constructor tsd-parent-kind-class"><span class="tsd-kind-icon">Constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-class"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class"><span class="tsd-kind-icon">Method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class"><span class="tsd-kind-icon">Accessor</span></li>
+				<li class="tsd-kind-index-signature tsd-parent-kind-class"><span class="tsd-kind-icon">Index signature</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited accessor</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected accessor</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private accessor</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static property</span></li>
+				<li class="tsd-kind-call-signature tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static method</span></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p>Generated using <a href="http://typedoc.io" target="_blank">TypeDoc</a></p>
+</div>
+<div class="overlay"></div>
+<script src="../assets/js/main.js"></script>
+<script>if (location.protocol == 'file:') document.write('<script src="../assets/js/search.js"><' + '/script>');</script>
+</body>
+</html>

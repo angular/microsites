@@ -1,0 +1,62 @@
+
+  <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+
+    <%- partial("node_modules/microsite-ui/_partials/nav", {
+      name: 'Material',
+      logoWithText: 'node_modules/microsite-ui/images/angular-logo-with-text.svg',
+      CTA: {
+        text: 'Preview on GitHub',
+        url: 'https://github.com/angular/material2'
+      },
+      pages: [{
+              text: 'Guides',
+              href: '/guides/'
+            }],
+      homeHref: '/'
+    }) %>
+
+    <main class="mdl-layout__content">
+      <header class="hero-background">
+
+          <!-- Hero -->
+          <%- partial("node_modules/microsite-ui/_partials/hero", {
+            name: 'Angular Material',
+            logo: {
+              src: 'images/material-logo.png',
+              alt: 'Angular Material'
+            },
+            tagline: 'Material Design components for Angular 2 apps',
+            CTA: {
+              text: 'Preview on GitHub',
+              href: 'https://github.com/angular/material2'
+            }
+          }) %>
+
+      </header>
+
+      <!-- Add as many features as needed -->
+      <%- partial("node_modules/microsite-ui/_partials/features", {
+        features: [{
+          name: 'Sprint from Zero to App',
+          text: 'Hit the ground running with comprehensive, modern UI components that work across web, mobile and desktop.'
+        }, {
+          name: 'Fast and Consistent',
+          text: 'Finely tuned performance, because every millisecond counts. Fully tested across IE11 and current versions of Chrome, Edge, Firefox, and Safari.'
+        }, {
+          name: 'Versatile',
+          text: 'Themable, for when you need to stay on-brand or just have a favorite color. Accessible and internationalized so that all users are welcome.'
+        }, {
+          name: 'Optimized for Angular',
+          text: 'Built by the Angular team to integrate seamlessly with Angular 2.'
+        }],
+        CTA: {
+          text: 'Preview on GitHub',
+          url: 'https://github.com/angular/material2'
+        }
+      }) %>
+
+      <%- partial("node_modules/microsite-ui/_partials/footer", {
+        footerImg: 'node_modules/microsite-ui/images/angular-logo.svg'
+      }) %>
+    </main>
+  </div>

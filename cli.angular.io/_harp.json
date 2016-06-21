@@ -1,0 +1,9 @@
+{
+ "globals": {
+   "name"  : "CLI",
+   "global_cta" : {
+     "href" : "https://github.com/angular/angular-cli",
+     "text" : "Get Started"
+   }
+ }
+}

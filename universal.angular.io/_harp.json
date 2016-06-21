@@ -1,0 +1,9 @@
+{
+ "globals": {
+   "name"  : "Universal",
+   "global_cta" : {
+     "href" : "/quickstart",
+     "text" : "Get Started"
+   }
+ }
+}

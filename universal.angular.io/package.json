@@ -1,0 +1,24 @@
+{
+  "name": "universal.angular.io",
+  "version": "1.0.0",
+  "description": "Run this command at the root of the project directory ``` git clone https://github.com/ericjim/microsite-ui ``` This will include `microsite-ui` a library with ejs partials which can be used to compose a microsite.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ericjim/universal.angular.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ericjim/universal.angular.io/issues"
+  },
+  "homepage": "https://github.com/ericjim/universal.angular.io#readme",
+  "dependencies": {
+    "material-design-lite": "^1.1.3",
+    "microsite-ui": "git://github.com/ericjim/microsite-ui.git"
+  },
+  "devDependencies": {}
+}

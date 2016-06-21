@@ -1,0 +1,59 @@
+
+  <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+
+    <%- partial("node_modules/microsite-ui/_partials/nav", {
+      name: 'Mobile',
+      logoWithText: 'node_modules/microsite-ui/images/angular-logo-with-text.svg',
+      CTA: {
+        text: 'Preview on GitHub',
+        url: 'https://github.com/angular/mobile-toolkit'
+      },
+      pages: [{
+        text: 'Guides',
+        href: '/guides/'
+      }],
+      homeHref: '/'
+    }) %>
+
+    <main class="mdl-layout__content">
+      <header class="hero-background">
+
+          <!-- Hero -->
+          <%- partial("node_modules/microsite-ui/_partials/hero", {
+            name: 'Angular Mobile Toolkit',
+            logo: {
+              src: 'images/mobile-logo.svg',
+              alt: 'Mobile Toolkit'
+            },
+            tagline: 'All the tools and techniques to build high-performance mobile apps',
+            CTA: {
+              text: 'Preview on GitHub',
+              href: 'https://github.com/angular/mobile-toolkit'
+            }
+          }) %>
+
+      </header>
+
+      <!-- Add as many features as needed -->
+      <%- partial("node_modules/microsite-ui/_partials/features", {
+        features: [{
+          name: 'Performance of native, discoverability of the Web',
+          text: 'The Angular Mobile Toolkit makes it easy to build snappy Web apps that load instantly on any device, even without an internet connection. Take advantage of the searchability, shareability, and no-install-required-ability of the Web without compromise.'
+        }, {
+          name: 'Automatic Progressive Web Apps',
+          text: 'Build Progressive Web Apps with ease using Angular CLI and Angular Mobile Toolkit. Plugins and libraries for App Shell, Service Worker, and Application Manifest make it easy to create installable, offline-capable, mobile-network-friendly apps in minutes.'
+        }, {
+          name: 'One developer, many platforms',
+          text: 'A single Web development team is now a cross-platform application powerhouse. Focus more energy on building better experiences, and less energy on making experiences consistent across development teams and device platforms.'
+        }],
+        CTA: {
+          text: 'Get Started',
+          url: 'https://github.com/angular/mobile-toolkit'
+        }
+      }) %>
+
+      <%- partial("node_modules/microsite-ui/_partials/footer", {
+        footerImg: 'node_modules/microsite-ui/images/angular-logo.svg'
+      }) %>
+    </main>
+  </div>
