@@ -7,6 +7,7 @@ A monorepo containing all Angular 2 microsites.
 * [X] Add universal
 * [X] Add protractor
 * [X] Add material
+* [~] How do we handle the shared code from [microsite-ui](https://github.com/ericjim/microsite-ui)? 
 * [ ] Streamline build process
 * [ ] Document build process
 * [ ] Once approved, transfer repo to Angular Organization
