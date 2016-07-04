@@ -5,7 +5,7 @@ A monorepo containing all Angular 2 microsites.
 * [X] Add mobile
 * [X] Add cli
 * [X] Add universal
-* [ ] Add protractor
+* [X] Add protractor
 * [X] Add material
 * [ ] Streamline build process
 * [ ] Document build process
