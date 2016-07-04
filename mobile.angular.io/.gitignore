@@ -57,5 +57,4 @@ fabric.properties
 
 www/
 node_modules/
-package.json
 microsite-ui/
