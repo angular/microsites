@@ -1,0 +1,56 @@
+
+  <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+
+    <%- partial("node_modules/microsite-ui/_partials/nav", {
+      name: 'Protractor',
+      logoWithText: 'node_modules/microsite-ui/images/angular-logo-with-text.svg',
+      CTA: {
+        text: 'Get Started',
+        url: 'http://angular.github.io/protractor/#/'
+      },
+      pages: [],
+      homeHref: 'index.html'
+    }) %>
+
+    <main class="mdl-layout__content">
+      <header class="hero-background">
+
+          <!-- Hero -->
+          <%- partial("node_modules/microsite-ui/_partials/hero", {
+            name: 'Protractor',
+            logo: {
+              src: './images/protractor.png',
+              alt: 'Protractor'
+            },
+            tagline: 'The official end to end testing framework for Angular apps',
+            CTA: {
+              text: 'Get Started',
+              href: 'http://angular.github.io/protractor/#/'
+            }
+          }) %>
+
+      </header>
+
+      <!-- Add as many features as needed -->
+      <%- partial("node_modules/microsite-ui/_partials/features", {
+        features: [{
+          name: 'For Angular Apps',
+          text: 'Protractor is made specifically for Angular apps. It supports Angular-specific locator strategies, which allows you to test Angular-specific elements without any setup effort on your part.'
+        },{
+          name: 'Test Like a User',
+          text: 'Protractor is built on top of WebDriverJS, which uses native events and browser-specific drivers to interact with your application as a user would.'
+        },{
+          name: 'Automatic Waiting',
+          text: 'Protractor can automatically execute the next step in your test the moment the webpage finishes pending tasks, so you don’t have to worry about waiting for your test and webpage to sync.'
+        }],
+        CTA: {
+          text: 'Get Started',
+          url: 'http://angular.github.io/protractor/#/'
+        }
+      }) %>
+
+      <%- partial("node_modules/microsite-ui/_partials/footer", {
+        footerImg: 'node_modules/microsite-ui/images/angular-logo.svg'
+      }) %>
+    </main>
+  </div>

@@ -1,0 +1,9 @@
+{
+ "globals": {
+   "name"  : "Protractor",
+   "global_cta" : {
+     "href" : "http://angular.github.io/protractor/#/",
+     "text" : "Get Started"
+   }
+ }
+}

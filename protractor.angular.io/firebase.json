@@ -1,0 +1,8 @@
+{
+  "firebase": "protractor-angular-io",
+  "public": "www",
+  "ignore": [
+    "firebase.json",
+    "**/.*"
+  ]
+}
