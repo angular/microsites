@@ -23,3 +23,8 @@ $primary-dark: unquote("rgb(#{$palette-green-900})"); // This is the darkest sha
 .features-list a {
     color: $primary-color;
 }
+
+/* ==========  Safari MDL FIX  ========== */
+.mdl-base {
+  height: 100vh;
+}
