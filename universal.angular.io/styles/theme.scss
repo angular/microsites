@@ -28,3 +28,35 @@ $primary-dark: unquote("rgb(#{$palette-green-900})"); // This is the darkest sha
 .mdl-base {
   height: 100vh;
 }
+
+// MARKDOWN CONTENT
+.markdown-doc {
+  $markdown-padding: 200px;
+  $markdown-margin: 48px;
+  $markdown-margin-mobile: 100px;
+
+  //Markdown Code Blocks
+  $code-background: #f5f6f7;
+  $code-radius: 4px;
+  $code-border: $code-radius solid $primary-color;
+  $code-margin: 30px;
+  $code-padding: 30px 40px;
+
+  pre {
+    background: $code-background;
+    border-left: $code-border;
+    border-radius: $code-radius;
+    margin-bottom: $code-margin;
+    padding: $code-padding;
+    overflow-x: scroll;
+  }
+
+  pre[class*="language-"] {
+    padding: $code-padding;
+  }
+
+  pre, code {
+    overflow-x: scroll;
+    background-color: $code-background;
+  }
+}
