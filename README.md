@@ -4,7 +4,7 @@ A monorepo containing all Angular 2 microsites.
 ## Dependencies
 * [Harp.js](http://harpjs.com/), a static web server with a built-in preprocessor.
 * [Material Design Lite](https://getmdl.io/)
-* [microsite-ui](github.com/ericjim/microsite-ui), a shared repo containing that contains all components shared among the microsites.
+* [microsite-ui](https://github.com/ericjim/microsite-ui), a shared repo containing that contains all components shared among the microsites.
 
 ## Architecture
 Angular.io has five microsites: Mobile, CLI, Universal, Protractor, and Material; all which exist under a *.angular.io subdomain. Each site consists of a hero with an image, some features with descriptions, a footer with helpful links, and a call-to-action. Depending on the status of the library/tool that the site advertises, the call-to-action will vary. For example, some sites will lead to the code base on GitHub (Material, Mobile, CLI), while the others take the viewer to their respective documentation (Universal, Protractor). Besides the slight variation, the intended theme for all microsites is to retain a similar look and behaviour. To accomplish this, we built `microsite-ui` as a shared resource among all the sites.
