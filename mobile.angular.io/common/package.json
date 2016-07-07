@@ -1,0 +1,62 @@
+{
+  "_args": [
+    [
+      "microsite-ui@git://github.com/ericjim/microsite-ui.git#fix-use-guides",
+      "/Users/ericjimenez/Documents/Rangle/microsites/mobile.angular.io"
+    ]
+  ],
+  "_from": "git://github.com/ericjim/microsite-ui.git#fix-use-guides",
+  "_id": "microsite-ui@1.0.0",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/microsite-ui",
+  "_phantomChildren": {},
+  "_requested": {
+    "hosted": {
+      "directUrl": "https://raw.githubusercontent.com/ericjim/microsite-ui/fix-use-guides/package.json",
+      "gitUrl": "git://github.com/ericjim/microsite-ui.git#fix-use-guides",
+      "httpsUrl": "git+https://github.com/ericjim/microsite-ui.git#fix-use-guides",
+      "shortcut": "github:ericjim/microsite-ui#fix-use-guides",
+      "ssh": "git@github.com:ericjim/microsite-ui.git#fix-use-guides",
+      "sshUrl": "git+ssh://git@github.com/ericjim/microsite-ui.git#fix-use-guides",
+      "type": "github"
+    },
+    "name": "microsite-ui",
+    "raw": "microsite-ui@git://github.com/ericjim/microsite-ui.git#fix-use-guides",
+    "rawSpec": "git://github.com/ericjim/microsite-ui.git#fix-use-guides",
+    "scope": null,
+    "spec": "git://github.com/ericjim/microsite-ui.git#fix-use-guides",
+    "type": "hosted"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "git://github.com/ericjim/microsite-ui.git#39b83a0c95c0c9f4526faef2032ebcb91c2935e0",
+  "_shasum": "1686a40a945f5ccdea91a3625f929e820599acda",
+  "_shrinkwrap": null,
+  "_spec": "microsite-ui@git://github.com/ericjim/microsite-ui.git#fix-use-guides",
+  "_where": "/Users/ericjimenez/Documents/Rangle/microsites/mobile.angular.io",
+  "bugs": {
+    "url": "https://github.com/ericjim/microsite-ui/issues"
+  },
+  "dependencies": {
+    "material-design-lite": "^1.1.3"
+  },
+  "description": "A component library for stylizing angular microsites [WIP].",
+  "devDependencies": {},
+  "gitHead": "39b83a0c95c0c9f4526faef2032ebcb91c2935e0",
+  "homepage": "https://github.com/ericjim/microsite-ui#readme",
+  "license": "MIT",
+  "main": "index.js",
+  "name": "microsite-ui",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ericjim/microsite-ui.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "1.0.0"
+}

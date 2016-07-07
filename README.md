@@ -4,10 +4,15 @@ A monorepo containing all Angular 2 microsites.
 ## Dependencies
 * [Harp.js](http://harpjs.com/), a static web server with a built-in preprocessor.
 * [Material Design Lite](https://getmdl.io/)
-* [microsite-ui](https://github.com/ericjim/microsite-ui), a shared repo containing that contains all components shared among the microsites.
 
 ## Architecture
-Angular.io has five microsites: Mobile, CLI, Universal, Protractor, and Material; all which exist under a *.angular.io subdomain. Each site consists of a hero with an image, some features with descriptions, a footer with helpful links, and a call-to-action. Depending on the status of the library/tool that the site advertises, the call-to-action will vary. For example, some sites will lead to the code base on GitHub (Material, Mobile, CLI), while the others take the viewer to their respective documentation (Universal, Protractor). Besides the slight variation, the intended theme for all microsites is to retain a similar look and behaviour. To accomplish this, we built `microsite-ui` as a shared resource among all the sites.
+Angular.io has five microsites: Mobile, CLI, Universal, Protractor, and Material; all which exist under a *.angular.io subdomain. Each site consists of a hero with an image, some features with descriptions, a footer with helpful links, and a call-to-action. Depending on the status of the library/tool that the site advertises, the call-to-action will vary. For example, some sites will lead to the code base on GitHub (Material, Mobile, CLI), while the others take the viewer to their respective documentation (Universal, Protractor). Besides the slight variation, the intended theme for all microsites is to retain a similar look and behaviour. To accomplish this, we built `common` as a shared resource among all the sites, `common` is found inside each microsite folder. 
+
+### Drawbacks
+Ideally, we would like `common` to exist at the root of this project. However, `harp.js` cannot grab dependencies outside the scope in which it is invoked. In other words, if I run the `harp.js` server inside `universal.angular.io`, the server cannot look outside of it.
+
+## Partials
+The `common` folder contains [partials](https://harpjs.com/docs/development/partial) which are the building blocks of all of our microsites. Similarly, each microsite has its own set of partials which best suit what it is trying to convey. Generally speaking, any partial that can be reused should be in `common`, and any partial that is specific to a microsite should be within its own folder outside of `common`. Before javascript frameworks were a thing, the use of partials was used to render sites from the server-side. Since we are not presenting a site with much interactivity, the use of server-side rendering was preferred due to its improvements in SEO.
 
 ## Installing dependencies
 We have one external dependency, `harp.js`. It’s our server, our compiler, and our linter. Let’s install it.
@@ -26,24 +31,8 @@ Once cloned, choose a site to work on. Let’s pick Universal as an example
 > cd universal.angular.io
 ```
 
-We now need to get all the dependencies for Universal, namely `material-design-lite` and `microsite-ui`, so we will use npm to fetch them.
+We now need to get all the dependencies for Universal, namely `material-design-lite`, so we will use npm to fetch them.
 ```
-> npm install
-```
-
-If you inspect `package.json` you’ll notice that `microsite-ui` is not an NPM package.
-```
-…
-  "dependencies": {
-    "material-design-lite": "^1.1.3",
-    "microsite-ui": "git://github.com/ericjim/microsite-ui.git"
-  },
-…
-```
-As a result, we’ll have to go to `node_modules/microsite-ui` and manually install all of its dependencies. NOTE: this is a pitfall we would like to fix. Possibly by assimilating `microsite-ui` into `angular/microsites`
-
-```
-> cd ./node_modules/microsite-ui
 > npm install
 ```
 
@@ -95,6 +84,6 @@ And you may preview the site using:
 * [X] Add universal
 * [X] Add protractor
 * [X] Add material
-* [ ] How do we handle the shared code from [microsite-ui](https://github.com/ericjim/microsite-ui)? 
+* [ ] How do we handle the shared code? (Note: this is almost done in this branch, but it introduces trade-offs. Like, how do we keep `common` synced?)
 * [ ] Streamline build process
 * [x] Document build process

@@ -1,0 +1,14 @@
+<header class="hero-background">
+    <section class="hero-container section--center mdl-grid mdl-grid--no-spacing">
+        <div class="logo-container mdl-cell mdl-cell--6-col-desktop mdl-cell--12-col-tablet mdl-cell--12-col-phone">
+            <img class="hero-image" src="<%- logo.src %>" alt="<%- logo.alt %>">
+        </div>
+        <div class="mdl-cell mdl-cell--6-col-desktop mdl-cell--12-col-tablet mdl-cell--12-col-phone">
+            <h4 class=""><%- name %></h4>
+            <h5 class="tagline"><%- tagline %></h5>
+            <a target="_blank" href='<%= CTA.href %>' class="mdl-typography--font-regular cta mdl-button mdl-button--raised mdl-button--primary">
+                <%- CTA.text %>
+            </a>
+        </div>
+    </section>
+</header>
