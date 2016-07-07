@@ -40,13 +40,13 @@ function ngApp(req, res) {
 
     // dependencies shared among all requests to server
     platformProviders: [
-      provide(ORIGIN_URL, {useValue: 'http://localhost:3000'}),
-      provide(BASE_URL, {useValue: baseUrl}),
+      {provide: ORIGIN_URL, useValue: 'http://localhost:3000'},
+      {provide: BASE_URL, useValue: baseUrl},
     ],
 
     // dependencies re-created for each request
     providers: [
-      provide(REQUEST_URL, {useValue: url}),
+      {provide: REQUEST_URL, useValue: url},
       provideRouter(routes),
       NODE_LOCATION_PROVIDERS,
       NODE_HTTP_PROVIDERS,
