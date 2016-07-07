@@ -1,0 +1,85 @@
+<%
+// docs :: [String]
+var docs = public.guides.docs._contents
+
+// replaceAll :: String -> String -> String -> String
+var replaceAll = function(str, find, replace) {
+    return str.replace(new RegExp(find, 'g'), replace);
+}
+
+// cleanSideNavEntry :: String -> String
+var cleanSideNavEntry = function(str) {
+    var removeNumber = str.slice(1);
+    var removeExt = removeNumber.replace('.html', ' ');
+    var replaceDashes = replaceAll(removeExt, '-', ' ');
+    var entry = replaceDashes.trim();
+
+    return entry;
+}
+
+// generateUrlFromFilename :: String -> String
+var generateUrlFromFilename = function(str) {
+    return str.slice(1).replace('-', '');
+}
+
+// isSideNavEntrySelected :: String -> Number -> String
+// Globals: `current`
+var isSideNavEntrySelected = function(entry, i) {
+    var currentEntry = current.path[current.path.length - 1];
+    var entryNoExt = entry.replace('.html', '');
+    var entryNoNumber = entryNoExt.slice(2);
+
+    var isIndex = ((currentEntry === 'index') && (i === 0)); // case where no doc was selected, then select first entry
+    var isSelected = (currentEntry === entryNoNumber) || isIndex;
+
+    return isSelected ? 'selected' : '';
+}
+%>
+
+<%- partial("../../_partials/nav", {
+    logoWithText: '../../node_modules/microsite-ui/images/angular-logo-with-text.svg',
+    CTA: {
+        text: 'Get Started',
+        url: ''
+    },
+    pages: [{
+        text: 'Guides',
+        href: '/guides/'
+    }],
+    homeHref: '/'
+}) %>
+
+<div class="mdl-layout__drawer">
+    <span class="mdl-layout-title">Guides</span>
+
+    <nav class="mdl-navigation">
+      <nav class="mdl-navigation">
+          <% for(var i = 0; i < docs.length; i++) {%>
+          <a class="mdl-navigation__link <%- isSideNavEntrySelected(docs[i], i)%>"
+             href=" <%- generateUrlFromFilename(docs[i]) %>">
+              <%- i + 1%> - <%- cleanSideNavEntry(docs[i]) %>
+          </a>
+          <% } %>
+      </nav>
+    </nav>
+  </div>
+
+  <main class="mdl-layout__content">
+    <header class="hero-background">
+        <section class="section mdl-grid mdl-grid--no-spacing">
+            <div class="mdl-cell">
+                <h4 class="mt1 page-title"><%- title %></h4>
+            </div>
+        </section>
+    </header>
+
+    <div class="page-content markdown-doc">
+        <%- partial(selectedGuide) %>
+    </div>
+
+
+    <%- partial("../../_partials/footer", {
+        footerImg: '../../node_modules/microsite-ui/images/angular-logo.svg'
+    }) %>
+  </main>
+</div>

@@ -1,0 +1,384 @@
+/* ==========  DO NOT ALTER THIS FILE  ========== */
+@import "../node_modules/material-design-lite/src/variables";
+@import "sample-theme.scss";
+@import '../../styles/theme.scss';
+
+// Main Variables
+$box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+$nav-transform: 3px;
+
+
+/* ==========  Main Styles  ========== */
+body {
+  font-family: 'Roboto', Helvetica, sans-serif;
+}
+
+h4 {
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 40px;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+h5 {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 28px;
+  margin-bottom: 25px;
+  margin-top: 15px;
+  max-width: 300px;
+}
+
+/* ==========  Body Styles  ========== */
+  .mdl-demo {
+    height: 100vh;
+  }
+
+  .mdl-demo section.section--center {
+    max-width: 920px;
+  }
+
+  .mdl-grid--no-spacing>.mdl-cell {
+    width: 100%;
+  }
+
+  .mdl-layout--fixed-drawer>.mdl-layout__content {
+    margin-left: 0;
+  }
+
+/* ==========  Top Navigation  ========== */
+  //TOP NAV
+
+  .mdl-layout__header {
+    background-color: $primary-color;
+    box-shadow: $box-shadow;
+
+    a {
+      color: $neutral-white;
+      text-decoration: none;
+    }
+  }
+
+  .mdl-layout--fixed-drawer.is-upgraded:not(.is-small-screen)>.mdl-layout__header {
+     margin-left: 0;
+     width: 100%;
+   }
+
+   .mdl-layout--fixed-drawer>.mdl-layout__header
+   .mdl-layout__header-row {
+     $header-logo-padding: 25px;
+
+     padding-left: $header-logo-padding;
+     padding-right: 0;
+   }
+
+   .mdl-layout__drawer-button {
+     display: none;
+
+     @media (max-width: 1024px) {
+       display: inline-block;
+     }
+   }
+
+  .mdl-layout__drawer {
+    margin-top: 65px;
+    height: calc(100% - 65px);
+
+    @media (max-width: 1024px) {
+      margin-top: 0;
+      height: 100%;
+    }
+  }
+
+  //NAME
+  .mdl-layout__title, .mdl-layout-title {
+    $title-font-size: 16px;
+    $title-line-height: 28px;
+
+    font-size: $title-font-size;
+    line-height: $title-line-height;
+    letter-spacing: 0.02em;
+  }
+
+  .microsite-name {
+    $name-font-size: 20px;
+    $margin-right: 30px;
+    $margin-left: 8px;
+
+    display: inline-block;
+    font-size: $name-font-size;
+    margin-left: $margin-left;
+    margin-right: $margin-right;
+    text-transform: uppercase;
+    transform: translateY($nav-transform);
+  }
+
+  //LINKS
+  .mdl-navigation__link {
+    $link-font-size: 16px;
+
+    font-size: $link-font-size;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    &:hover {
+      background-color: $secondary-color;
+    }
+  }
+
+  .top-nav-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+
+    label {
+      display: none;
+
+      &:hover {
+        background-color: $secondary-color;
+      }
+    }
+  }
+
+  // MENU MOBILE
+  /*
+  This uses a CSS hack for now, but should be replaced with proper JS in the future.
+  The way it currently works:
+  - The `site menu` is a label that points to a hidden checkbox
+  - The checkbox and the `:checked` pseudo-selector are used to target the open/closed states
+  - This selector allows us to show/hide the navigation items based on click toggle
+  TODO: Replace this with data-binding when Angular is included
+  */
+
+  @media (max-width: 800px) {
+    .top-nav-wrapper {
+      display: block;
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 100%;
+
+      label {
+      $padding: 16px;
+
+        cursor: pointer;
+        display: block;
+        float: right;
+        line-height: 56px;
+        padding: 0 $padding;
+      }
+
+      nav {
+        background: $secondary-color;
+        clear: both;
+        display: none;
+        height: auto !important;
+
+        a {
+          display: block;
+        }
+      }
+
+      .mdl-layout-spacer {
+        display: none;
+      }
+    }
+
+    input:checked + .top-nav-wrapper {
+      label {
+        background: $secondary-color;
+      }
+
+      nav {
+        display: block;
+      }
+    }
+  }
+
+/* ==========  Hero Styles  ========== */
+  //BACKGROUND
+  .hero-background {
+    $hero-margin: 60px;
+
+    background: linear-gradient($secondary-color, $primary-color);
+    color: $neutral-white;
+    margin-bottom: $hero-margin;
+  }
+
+  .mdl-grid {
+    align-items: center;
+  }
+
+  //IMAGE
+  .hero-container {
+    padding: 56px 0 56px 0 !important;
+
+    @media (max-width: 830px) {
+      text-align: center;
+    }
+  }
+
+  .logo-container {
+    overflow: hidden;
+    text-align: center;
+  }
+
+  //TEXT
+  @media (max-width: 840px) {
+    .tagline {
+      max-width: 100%;
+    }
+  }
+
+  //CTA BUTTON
+  .mdl-button {
+    $button-height: 45px;
+    $button-line-height: $button-height;
+    $button-width: 140px;
+    $button-padding: 30px;
+
+    height: $button-height;
+    line-height: $button-line-height;
+    min-width: $button-width;
+    padding: 0 $button-padding;
+  }
+
+  .mdl-button--primary.mdl-button--primary.mdl-button--raised,
+  .mdl-button--primary.mdl-button--primary.mdl-button--fab {
+    background-color: $neutral-white;
+    color: $primary-dark;
+  }
+
+/* ==========  Feature Styles  ========== */
+  //CONTAINER
+  .features-list {
+    $features-margin: 23px;
+    $features-padding: 15px;
+    $features-padding-right: 200px;
+
+    width: 920px;
+    margin: 0 0 $features-margin 0;
+    padding: $features-padding;
+    padding-right: $features-padding-right;
+
+    @media (max-width: 840px) {
+      padding-right: $features-padding;
+    }
+  }
+
+  //TITLE
+  .features-list h4 {
+    color: #37474F;
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 32px;
+    margin-top: 10px;
+    margin: 0 0 16px 0;
+    opacity: .87;
+  }
+
+  //CONTENT
+  .features-list p {
+    font-size: 16px;
+    line-height: 30px;
+    opacity: .87;
+  }
+
+/* ==========  CTA Styles  ========== */
+
+  //BOTTOM  CTA
+  .button-container {
+    $button-margin: 24px;
+
+    margin-bottom: $button-margin !important;
+    text-align: center;
+  }
+
+  .mdl-button--accent.mdl-button--accent.mdl-button--raised,
+  .mdl-button--accent.mdl-button--accent.mdl-button--fab {
+    background-color: $primary-color;
+    color: $neutral-white;
+  }
+
+
+/* ==========  Footer Styles  ========== */
+  //CONTAINER
+
+  .mdl-mega-footer--bottom-section .mdl-cell--9-col{
+    justify-content: flex-end;
+    align-items: center;
+    display: flex;
+  }
+
+  .mdl-mega-footer--bottom-section,
+  .mdl-mega-footer__bottom-section {
+    background-color: #263238;
+    bottom: 0;
+    color: white;
+    padding-top: 0;
+    right: 0;
+  }
+  //LOGO
+
+  //LINKS
+  footer ul {
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 24px;
+    list-style: none;
+    padding: 0;
+
+    a {
+      color: white;
+      font-size: 16px;
+      line-height: 28px;
+      opacity: .87;
+      padding: 0;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    @media (max-width: 830px) {
+      $link-background-color: rgba(0, 0, 0, 0.12);
+      $link-padding: 8px;
+
+      background-color: $link-background-color;
+      padding: $link-padding;
+      text-align: center;
+    }
+  }
+
+  //CC
+  .mdl-mega-footer--bottom-section {
+    margin-bottom: 0;
+
+    & p {
+      font-size: 12px;
+      margin: 0;
+      opacity: .54;
+    }
+
+    & a {
+      color: white;
+      font-weight: normal;
+      padding: 0;
+      text-decoration: none;
+    }
+  }
+
+  .power-text {
+    text-align: right;
+
+    @media (max-width: 830px) {
+      text-align: center;
+      width: calc(100% - 16px);
+    }
+  }
+
+@import "sample-theme.scss";
+@import '../../styles/theme.scss';

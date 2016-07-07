@@ -1,0 +1,24 @@
+<div class="mdl-demo mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
+  <header class="mdl-layout__header">
+    <div class="mdl-layout__header-row">
+      <span class="mdl-layout-title">
+        <a class="site-header mdl-navigation__link--title" href="<%- homeHref %>">
+          <img src="<%- logoWithText %>" alt="">
+          <span class="microsite-name mdl-typography--font-light"><%= name %></span>
+        </a>
+      </span>
+    <input type="checkbox" id="site-nav-checkbox" class="visuallyhidden">
+    <div class="top-nav-wrapper">
+        <label for="site-nav-checkbox">SITE MENU</label>
+        <nav class="mdl-navigation">
+            <% for(var i = 0; i < pages.length; i++) {%>
+            <a class="mdl-navigation__link" href="<%- pages[i].href %>"><%- pages[i].text %></a>
+            <% } %>
+        </nav>
+        <div class="mdl-layout-spacer"></div>
+        <nav class="mdl-navigation">
+            <a class="mdl-navigation__link" href="<%- global_cta.href %>"> <%- global_cta.text %> </a>
+        </nav>
+    </div>
+    </div>
+  </header>

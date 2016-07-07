@@ -1,0 +1,56 @@
+<div class="mdl-layout mdl-js-layout">
+
+    <!-- Nav -->
+    <%- partial("_partials/nav", {
+        name: 'NAME',
+        logoWithText: '../images/angular-logo-with-text.svg',
+        CTA: {
+            text: 'Get Started',
+            url: '#'
+        },
+        pages: [{
+          text: 'Guides',
+          href: '/guides',
+        }],
+          homeHref: 'index.html'
+    }) %>
+
+    <main class="mdl-layout__content">
+        <!-- Hero -->
+        <%- partial("_partials/hero", {
+            name: 'Name of Microsite',
+            logo: {
+                src: 'images/logo.svg',
+                alt: ''
+            },
+            tagline: 'Here is a temporary tagline used for the microsite framework.',
+            CTA: {
+                text: 'Get Started',
+                url: '#'
+            }
+        }) %>
+
+        <!-- Add as many features as needed -->
+        <%- partial("_partials/features", {
+            features: [{
+              name: 'Feature 1',
+              text: 'Microsite feature description 1.'
+            }, {
+              name: 'Feature 2',
+              text: 'Microsite feature description 2.'
+            }, {
+              name: 'Feature 3',
+              text: 'Microsite feature description 3.'
+            }],
+            CTA: {
+                text: 'Get Started',
+                url: 'http://angular.github.io/protractor/#/'
+            }
+        }) %>
+
+        <!-- Footer -->
+        <%- partial("_partials/footer", {
+            footerImg: '../images/angular-logo.svg'
+        }) %>
+    </main>
+</div>

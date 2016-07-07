@@ -1,0 +1,139 @@
+@import '../../styles/sample-theme.scss';
+@import '../../../../styles/theme.scss';
+
+
+//VARIABLES
+$body-padding-desktop: 48px;
+$body-padding-mobile: 24px;
+$body-font-color: #37474F;
+$font-opacity: 0.87;
+
+
+// MAIN STYLES
+body {
+  color: $body-font-color;
+}
+
+.mdl-layout--fixed-drawer>.mdl-layout__content {
+  $drawer-width: 240px;
+
+  margin-left:$drawer-width;
+
+  @media(max-width: 1024px) {
+    margin: 0;
+  }
+}
+
+// HERO
+.hero-background {
+  @media(max-width: 1024px) {
+    margin: 0;
+  }
+
+  h4 {
+    font-weight: 300;
+    margin: 40px 0;
+    padding-left: $body-padding-desktop;
+
+    @media(max-width: 1024px) {
+      font-size: 22px;
+      margin: 10px 0 10px 0;
+      padding-left: $body-padding-mobile;
+    }
+  }
+}
+
+// MARKDOWN CONTENT
+.markdown-doc {
+  $markdown-padding: 200px;
+  $markdown-margin: 48px;
+  $markdown-margin-mobile: 40px;
+
+  //Markdown Code Blocks
+  $code-background: #f5f6f7;
+  $code-radius: 4px;
+  $code-border: $code-radius solid $primary-color;
+  $code-margin: 30px;
+  $code-padding: 30px 40px;
+
+  padding-left: $body-padding-desktop;
+  padding-right: $markdown-padding;
+  margin-bottom: $markdown-margin;
+
+  @media(max-width: 1024px) {
+    margin-top:   $markdown-margin-mobile;
+    padding-left: $body-padding-mobile;
+    padding-right: $body-padding-mobile;
+  }
+
+  h1 {
+    font-size: 24px;
+    font-weight: 500;
+    opacity: $font-opacity;
+  }
+
+  h2 {
+    font-size: 18px;
+    font-weight: 500;
+    opacity: $font-opacity;
+  }
+
+  p {
+    font-size: 16px;
+    line-height: 30px;
+    opacity: $font-opacity;
+  }
+
+  pre {
+    background: $code-background;
+    border-left: $code-border;
+    border-radius: $code-radius;
+    margin-bottom: $code-margin;
+    padding: $code-padding;
+    overflow-x: scroll;
+  }
+
+  pre, code {
+    overflow-x: scroll;
+    background-color: $code-background;
+  }
+
+  a {
+    color: $primary-color;
+    text-decoration: none;
+  }
+}
+
+// TOP NAV
+.site-header {
+  @media(max-width: 1024px) {
+    margin-left: 32px;
+  }
+}
+
+// SIDE NAV
+$darwer-title-background: #ECEFF1;
+$selected-background: #E0E0E0;
+
+.mdl-layout__drawer {
+  & >.mdl-layout-title {
+    background-color: $darwer-title-background;
+    font-weight: 500;
+    opacity: $font-opacity;
+    text-transform: uppercase;
+  }
+
+  & .mdl-navigation {
+    padding-top: 0;
+  }
+
+  & .mdl-navigation__link {
+    font-size: 14px;
+  }
+}
+
+.selected {
+  background-color: $selected-background;
+  color: $primary-color !important;
+  font-weight: 600;
+}

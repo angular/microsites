@@ -14,7 +14,6 @@
   "license": "MIT",
   "homepage": "https://github.com/ericjim/protractor.angular.io#readme",
   "dependencies": {
-    "microsite-ui": "git://github.com/ericjim/microsite-ui.git",
     "material-design-lite": "^1.1.3"
   }
 }

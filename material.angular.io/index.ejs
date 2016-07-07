@@ -1,9 +1,9 @@
 
   <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
 
-    <%- partial("node_modules/microsite-ui/_partials/nav", {
+    <%- partial("common/_partials/nav", {
       name: 'Material',
-      logoWithText: 'node_modules/microsite-ui/images/angular-logo-with-text.svg',
+      logoWithText: 'common/images/angular-logo-with-text.svg',
       CTA: {
         text: 'Preview on GitHub',
         url: 'https://github.com/angular/material2'
@@ -16,7 +16,7 @@
       <header class="hero-background">
 
           <!-- Hero -->
-          <%- partial("node_modules/microsite-ui/_partials/hero", {
+          <%- partial("common/_partials/hero", {
             name: 'Angular Material',
             logo: {
               src: 'images/material-logo.png',
@@ -32,7 +32,7 @@
       </header>
 
       <!-- Add as many features as needed -->
-      <%- partial("node_modules/microsite-ui/_partials/features", {
+      <%- partial("common/_partials/features", {
         features: [{
           name: 'Sprint from Zero to App',
           text: 'Hit the ground running with comprehensive, modern UI components that work across web, mobile and desktop.'
@@ -52,8 +52,8 @@
         }
       }) %>
 
-      <%- partial("node_modules/microsite-ui/_partials/footer", {
-        footerImg: 'node_modules/microsite-ui/images/angular-logo.svg'
+      <%- partial("common/_partials/footer", {
+        footerImg: 'common/images/angular-logo.svg'
       }) %>
     </main>
   </div>

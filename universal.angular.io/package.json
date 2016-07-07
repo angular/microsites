@@ -17,8 +17,7 @@
   },
   "homepage": "https://github.com/ericjim/universal.angular.io#readme",
   "dependencies": {
-    "material-design-lite": "^1.1.3",
-    "microsite-ui": "git://github.com/ericjim/microsite-ui.git"
+    "material-design-lite": "^1.1.3"
   },
   "devDependencies": {}
 }
