@@ -9,6 +9,9 @@ A monorepo containing all Angular 2 microsites.
 ## Architecture
 Angular.io has five microsites: Mobile, CLI, Universal, Protractor, and Material; all which exist under a *.angular.io subdomain. Each site consists of a hero with an image, some features with descriptions, a footer with helpful links, and a call-to-action. Depending on the status of the library/tool that the site advertises, the call-to-action will vary. For example, some sites will lead to the code base on GitHub (Material, Mobile, CLI), while the others take the viewer to their respective documentation (Universal, Protractor). Besides the slight variation, the intended theme for all microsites is to retain a similar look and behaviour. To accomplish this, we built `microsite-ui` as a shared resource among all the sites.
 
+## Partials
+The `microsite-ui` dependency contains [partials](https://harpjs.com/docs/development/partial) which are the building blocks of all of our microsites. Similarly, each microsite has its own set of partials which best suit what it is trying to convey. Generally speaking, any partial that can be reused should be in `microsite-ui`, and any partial that is specific to a microsite should be within its own folder outside of `microsite-ui`. Before javascript frameworks were a thing, the use of partials was used to render sites from the server-side. Since we are not presenting a site with much interactivity, the use of server-side rendering was preferred due to its improvements in SEO, and their overall ease of use.
+
 ## Installing dependencies
 We have one external dependency, `harp.js`. It’s our server, our compiler, and our linter. Let’s install it.
 ```
