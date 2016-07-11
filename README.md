@@ -18,6 +18,14 @@ We have one external dependency, `harp.js`. It’s our server, our compiler, and
 > npm install -g harp  
 ```
 
+## Quickstart
+Run the following command:
+```
+> npm run clean-start
+```
+
+If you'd like to know more about the build, read the section "How to build". Otherwise skip to Hosting.
+
 ## How to build
 To begin develop our sites, we must first clone the `angular/microsites` repository locally.
 ```
