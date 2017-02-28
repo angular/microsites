@@ -24,9 +24,9 @@ Run the following command:
 > npm run clean-start
 ```
 
-If you'd like to know more about the build, read the section "How to build". Otherwise skip to Hosting.
+If you'd like to know more about the build, read the section "How to serve locally". Otherwise skip to Building and Hosting.
 
-## How to build
+## How to serve locally
 To begin develop our sites, we must first clone the `angular/microsites` repository locally.
 ```
 > git clone git@github.com:angular/microsites.git  
@@ -65,7 +65,7 @@ Now that all of our packages have their sub dependencies, we can run a developme
 
 Unless you’ve changed the configuration port of `harp.js`, we can visit `localhost:9000` to preview the site.
 
-## Hosting
+## Building and Hosting
 All of our microsites are hosted on Firebase. You should install their command-line tool to follow along:
 ```
 > npm install -g firebase-tools
@@ -83,17 +83,53 @@ Since a `firebase.json` file already exists, we can see the name of a microsites
 }  
 ```
 
-In particular, you’ll notice that the official release app name on Firebase is `universal-angular-io`. Assuming you have access to the instance, you’ll be able to deploy everything under the `www` folder. To create this folder run this command at the root of the specific microsite folder.
+### Building
+
+Requirements:
+
+- You need Node 4 to compile, Node 6 doesn't seem to work properly with Harp 0.23.0.
+- Harp 0.20.1 is verified to work, but the latest Harp seems to not like some node_modules directories and even though it compiles, the resulting `www/` won't work.
+
+**WARNING: Always works from a clean repo, then npm install the microsite and go to node_modules/microsites-ui and npm install that.**
+
+Installing any other local packages (including harp) will create some problems in harp which scan all the directories to find templates.
+
+You’ll notice that the official release app key on Firebase is `universal-angular-io`. Assuming you have access to the instance, you’ll be able to deploy everything under the `www` folder. To create this folder run `harp compile` from the root of the specific microsite folder.
+
+>_There should be no errors_. Sometimes, you'll see the following error though:
+>
+>```json
+{
+  "source": "EJS",
+  "dest": "HTML",
+  "filename": "/Users/hansl/Sources/microsites/cli.angular.io/node_modules/microsite-ui/guides/_partials/guide.ejs",
+  "lineno": 1,
+  "name": "TypeError",
+  "message": "/Users/hansl/Sources/microsites/cli.angular.io/node_modules/microsite-ui/guides/cli-setup.ejs:1\n >> 1| <%- partial('_partials/guide', {\n    2|     title: 'Page Title',\n    3|     selectedGuide: '../docs/1-cli-setup'\n    4| }) %>\n\nCannot read property 'docs' of undefined",
+}
 ```
-> harp compile
+>
+> The way to fix this is to open the `node_modules/microsites-ui/guides/_partials/guide.ejs` and replace line 3:
+>
+> ```javascript
+> var docs = public.guides.docs._contents
+> ```
+> with the following:
+>
+> ```javascript
+var docs = []
 ```
+>
+> I do not understand Harp and how it finds templates, but there seems to be no `guides` at all, while the folder is there and there are templates in it. It also seems that those guides are not used and were something being developed and left in an unfinished state. Removing these does not change the result.
 
 `Harp.js` will prevent you from compiling a full site if any linting errors arise. At which point the platform will indicate where the issues are located. Once the site is compiled under `www`, you may deploy to Firebase using the following command:
+
 ```
 > firebase deploy
 ```
 
 And you may preview the site using:
+
 ```
 > firebase open
 ```
