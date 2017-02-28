@@ -1,9 +1,9 @@
-# Material Design for Angular 2
+# Material Design for Angular
 [![NPM Version](https://badge.fury.io/js/%40angular2-material%2Fcore.svg)](https://www.npmjs.com/package/%2540angular2-material%2Fcore)
 [![Build Status](https://travis-ci.org/angular/material2.svg?branch=master)](https://travis-ci.org/angular/material2)
 [![Gitter](https://badges.gitter.im/angular/material2.svg)](https://gitter.im/angular/material2?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 
-This is the home for the Angular team's Material Design components built on top of Angular 2.
+This is the home for the Angular team's Material Design components built on top of Angular.
 
 ### Project status
 The alpha has begun! See the [changelog](CHANGELOG.md) for more information.
@@ -27,7 +27,7 @@ Also see our [`Good for community contribution`](https://github.com/angular/mate
 [Plunker Template](http://plnkr.co/edit/o077B6uEiiIgkC0S06dd?p=preview)
 
 ## The goal of Angular Material
-Our goal is to build a set of high-quality UI components built with Angular 2 and TypeScript,
+Our goal is to build a set of high-quality UI components built with Angular and TypeScript,
 following the Material Design spec. These
 components will serve as an example of how to write Angular code following best practices.
 

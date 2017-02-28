@@ -5,7 +5,7 @@ import 'angular2-universal/polyfills';
 import * as path from 'path';
 import * as express from 'express';
 
-// Angular 2 Universal
+// Angular Universal
 import {provideRouter} from '@angular/router';
 import {enableProdMode} from '@angular/core';
 import {
@@ -18,7 +18,7 @@ import {
   ExpressEngineConfig
 } from 'angular2-universal';
 
-// replace this line with your Angular 2 root component
+// replace this line with your Angular root component
 import {App, routes} from './app';
 
 const app = express();
