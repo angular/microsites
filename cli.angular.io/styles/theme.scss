@@ -18,3 +18,8 @@ $primary-dark: unquote("rgb(#{$palette-red-900})"); // This is the darkest shade
     padding-right: 0;
   }
 }
+
+
+.mdl-base {
+  height: 100vh;
+}
