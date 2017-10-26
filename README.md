@@ -1,5 +1,5 @@
 # Microsites
-A monorepo containing all Angular 2 microsites.
+A monorepo containing all Angular.io microsites.
 
 ## Dependencies
 * [Harp.js](http://harpjs.com/), a static web server with a built-in preprocessor.
