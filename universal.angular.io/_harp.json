@@ -2,7 +2,7 @@
  "globals": {
    "name"  : "Universal",
    "global_cta" : {
-     "href" : "/quickstart",
+     "href" : "https://angular.io/guide/universal",
      "text" : "Get Started"
    }
  }
