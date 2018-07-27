@@ -1,8 +1,0 @@
-{
-  "firebase": "cli-angular-io",
-  "public": "www",
-  "ignore": [
-    "firebase.json",
-    "**/.*"
-  ]
-}
