@@ -1,5 +1,5 @@
 # Microsites
-A monorepo containing all Angular 2 microsites.
+A monorepo containing all Angular microsites.
 
 ## Dependencies
 * [Harp.js](http://harpjs.com/), a static web server with a built-in preprocessor.
@@ -142,6 +142,6 @@ And you may preview the site using:
 * [X] Add universal
 * [X] Add protractor
 * [X] Add material
-* [ ] How do we handle the shared code from [microsite-ui](https://github.com/ericjim/microsite-ui)? 
+* [ ] How do we handle the shared code from [microsite-ui](https://github.com/ericjim/microsite-ui)?
 * [ ] Streamline build process
 * [x] Document build process
